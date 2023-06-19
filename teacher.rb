@@ -1,16 +1,12 @@
-require './person.rb'
+require './person'
 
 class Teacher < Person
   def initialize(specialization)
-    super('teacher', 47)
+    super(47, 'teacher')
     @specialization = specialization
   end
 
   def can_use_services?
-    if @age > 18 || @parent_permission == true
-      true
-    else
-      false
-    end
+    @age > 18 || @parent_permission == true
   end
 end

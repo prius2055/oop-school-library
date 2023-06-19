@@ -1,6 +1,6 @@
-require './person.rb'
-require './student.rb'
-require './teacher.rb'
+require './person'
+require './student'
+require './teacher'
 
 teacher = Teacher.new('Arts')
 
