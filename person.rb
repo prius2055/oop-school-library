@@ -11,7 +11,7 @@ class Person
   attr_accessor :name, :age
 
   def can_use_services?
-    @age > 18 || @parent_permission == true
+    of_age? || @parent_permission == true
   end
 
   private
