@@ -22,7 +22,6 @@ capitalized_person.correct_name
 capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
 capitalized_trimmed_person.correct_name
 
-
 classroom = Classroom.new('Class 47')
 student = Student.new(classroom, 17, 'John')
 classroom.add_student(student)
