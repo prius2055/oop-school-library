@@ -11,5 +11,4 @@ class Book
     @rentals.push(rentals)
     book.rentals = self
   end
-
 end
