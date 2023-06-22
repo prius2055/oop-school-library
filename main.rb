@@ -34,5 +34,6 @@ person.add_rentals(book, "2023-06-20")
 puts classroom.students.inspect
 puts student.classroom.label
 puts book.rentals.inspect
+puts person.rentals.inspect
 
 
