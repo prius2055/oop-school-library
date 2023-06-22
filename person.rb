@@ -7,6 +7,7 @@ class Person < Nameable
     @name = name
     @age = age
     @parent_permission = parent_permission
+    @rentals = []
   end
 
   attr_reader :id
@@ -26,4 +27,10 @@ class Person < Nameable
   def of_age?
     @age >= 18
   end
+  
+  def add_rentals(rentals)
+    @rentals.push(rentals)
+    book.rentals = self
+  end
+
 end
