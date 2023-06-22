@@ -23,17 +23,15 @@ capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
 capitalized_trimmed_person.correct_name
 
 
-classroom = Classroom.new("Class A")
-student = Student.new(classroom, 17, "John")
+classroom = Classroom.new('Class 47')
+student = Student.new(classroom, 17, 'John')
 classroom.add_student(student)
 
-book = Book.new("Ruby Programming", "John Smith")
-person = Person.new("Mike")
-person.add_rentals(book, "2023-06-20")
+book = Book.new('Ruby Programming', 'John Smith')
+person = Person.new('Mike')
+person.add_rentals(book, '2023-06-20')
 
 puts classroom.students.inspect
 puts student.classroom.label
 puts book.rentals.inspect
 puts person.rentals.inspect
-
-
