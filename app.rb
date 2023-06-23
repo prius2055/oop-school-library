@@ -97,16 +97,6 @@ class App
     puts 'Enter date:'
     rental_date = gets.chomp
 
-
-
-    # person_id = gets.chomp.to_i
-
-    # print "Enter book title:"
-    # book_title = gets.chomp
-
-    # print "Rental date:"
-    # rental_date = gets.chomp
-
     success = library.create_rental(rental_date, book_index, person_index)
     if success
       puts "Rental created successfully."

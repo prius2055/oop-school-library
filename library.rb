@@ -34,8 +34,11 @@ class Library
     person = find_person_by_index(person_index)
     book = find_book_by_index(book_index)
 
+   
+
+
     if person && book
-      rental = Rental.new(date, book, person)
+      rental = Rental.new(rental_date, book, person)
       rentals << rental
       rental
     else
@@ -69,7 +72,7 @@ class Library
 
    def find_book_by_index(book_index)
     rental_book = []
-    people.each_with_index do |book, index| 
+    books.each_with_index do |book, index| 
       if index == book_index
         rental_book.push(person)
       end
