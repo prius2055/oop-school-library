@@ -79,11 +79,9 @@ class Library
     end
   end
 
-
-
-  # def find_book_by_index(book_title)
-  #   books.find { |book| book.title == book_title }
-  # end
+  def find_person_by_id(person_id)
+    people.find { |book| person.id == person_id }
+  end
 end
 
 

@@ -37,19 +37,3 @@ class Person < Nameable
   end
 end
 
-# class Person
-#   attr_reader :name, :id
-
-#   @@id_counter = 0
-
-#   def initialize(name)
-#     @name = name
-#     @id = generate_id
-#   end
-
-#   private
-
-#   def generate_id
-#     @@id_counter += 1
-#   end
-# end

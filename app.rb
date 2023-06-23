@@ -23,7 +23,7 @@ class App
     if people.empty?
       puts "No people found."
     else
-      people.each { |person| puts "Name: #{person.name}, Age: #{person.age} " }
+      people.each { |person| puts "Name: #{person.name}, Age: #{person.age}, Id: #{person.id} " }
     end
   end
 
@@ -106,15 +106,15 @@ class App
   end
 
   def list_rentals_for_person
-    puts "Enter person ID:"
+    print "Enter person ID:"
     person_id = gets.chomp.to_i
 
     rentals = library.list_rentals_for_person(person_id)
     if rentals.empty?
-      puts "No rentals found for person with ID #{person_id}."
+      puts "No rentals found for person with Id #{person_id}."
     else
-      puts "Rentals for person with ID #{person_id}:"
-      rentals.each { |rental| puts "Book: #{rental.book.title}, Due Date: #{rental.due_date}" }
+      puts "Rentals for person with Id #{person_id}:"
+      rentals.each { |rental| puts "Rental date: #{rental.due_date}, Book: #{rental.book}" }
     end
   end
 end
