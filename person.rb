@@ -1,6 +1,9 @@
 require './nameable'
 
 class Person < Nameable
+  attr_reader :id
+  attr_accessor :name, :age, :rentals
+
   def initialize(age, name = 'unknown', parent_permission: true)
     super()
     @id = Random.rand(1..1000)
@@ -10,9 +13,7 @@ class Person < Nameable
     @rentals = []
   end
 
-  attr_reader :id
-
-  attr_accessor :name, :age, :rentals
+ 
 
   def can_use_services?
     of_age? || @parent_permission == true
@@ -35,3 +36,20 @@ class Person < Nameable
     @age >= 18
   end
 end
+
+# class Person
+#   attr_reader :name, :id
+
+#   @@id_counter = 0
+
+#   def initialize(name)
+#     @name = name
+#     @id = generate_id
+#   end
+
+#   private
+
+#   def generate_id
+#     @@id_counter += 1
+#   end
+# end
