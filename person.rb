@@ -12,8 +12,6 @@ class Person < Nameable
     @rentals = []
   end
 
- 
-
   def can_use_services?
     of_age? || @parent_permission == true
   end
@@ -35,4 +33,3 @@ class Person < Nameable
     @age >= 18
   end
 end
-

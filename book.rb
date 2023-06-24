@@ -14,4 +14,3 @@ class Book
     rental
   end
 end
-
