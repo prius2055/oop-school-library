@@ -79,23 +79,21 @@ class App
       puts "No books found."
     else
       books.each_with_index { |book,index| puts "[#{index}] #{book.title} by #{book.author}" }
-      book_index = gets.chomp
+      book_index = gets.chomp.to_i
     end
 
-    puts "Select a person from the list below by number"
+    puts "Select a person from the list below by number (not id)"
 
     people = library.list_people
-    puts "List of people:"
     if people.empty?
       puts "No people found."
     else
-      people.each_with_index { |person, index| puts "[#{index}] Name: #{person.name}, Age: #{person.age} " }
-      person_index = gets.chomp
-      # person_id = person.id
+      people.each_with_index { |person, index| puts "[#{index}] Name: #{person.name}, Age: #{person.age}, Id: #{person.id} " }
+      person_index = gets.chomp.to_i
     end
 
     puts 'Enter date:'
-    rental_date = gets.chomp
+    rental_date = gets.chomp.to_s
 
     success = library.create_rental(rental_date, book_index, person_index)
     if success
@@ -109,12 +107,13 @@ class App
     print "Enter person ID:"
     person_id = gets.chomp.to_i
 
-    rentals = library.list_rentals_for_person(person_id)
-    if rentals.empty?
+    rental = library.list_rentals_for_person(person_id)
+    if rental.empty?
       puts "No rentals found for person with Id #{person_id}."
     else
-      puts "Rentals for person with Id #{person_id}:"
-      rentals.each { |rental| puts "Rental date: #{rental.due_date}, Book: #{rental.book}" }
+      rented = rental.first
+      puts "Rentals for person with Id #{person_id}"
+      puts "Rental date: #{rented.date}, Book: #{rented.book.title} by #{rented.book.author}"
     end
   end
 end

@@ -31,16 +31,12 @@ class Library
   end
 
   def create_rental(rental_date, book_index, person_index)
-    person = find_person_by_index(person_index)
-    book = find_book_by_index(book_index)
 
-   
-
-
+    person = people[person_index]
+    book = books[book_index]
     if person && book
       rental = Rental.new(rental_date, book, person)
       rentals << rental
-      rental
     else
       nil
     end
@@ -54,33 +50,14 @@ class Library
     people
   end
 
+
   def list_rentals_for_person(person_id)
-    person = find_person_by_id(person_id)
-    rentals.select { |rental| rental.person.id == person_id }
-  end
-
-  private
-
-  def find_person_by_index(person_index)
-    rental_person = []
-    people.each_with_index do |person, index| 
-      if index == person_index
-        rental_person.push(person)
+    rented = []
+    rentals.each do |rental| 
+      if rental.person.id == person_id
+        rented.push(rental)
       end
     end
-  end
-
-   def find_book_by_index(book_index)
-    rental_book = []
-    books.each_with_index do |book, index| 
-      if index == book_index
-        rental_book.push(person)
-      end
-    end
-  end
-
-  def find_person_by_id(person_id)
-    people.find { |book| person.id == person_id }
   end
 end
 
