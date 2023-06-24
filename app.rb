@@ -13,7 +13,7 @@ class App
     if books.empty?
       puts 'No books found.'
     else
-      books.each { |book| puts "#{book.title} by #{book.author}" }
+      books.each { |book| puts "Title: '#{book.title}', Author: #{book.author}" }
     end
   end
 
@@ -23,7 +23,7 @@ class App
     if people.empty?
       puts 'No people found.'
     else
-      people.each { |person| puts "Name: #{person.name}, Age: #{person.age}, Id: #{person.id} " }
+      people.each { |person| puts "[#{person.class}] Name: #{person.name}, Id: #{person.id} Age: #{person.age}," }
     end
   end
 
