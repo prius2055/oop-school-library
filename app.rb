@@ -138,9 +138,9 @@ class App
     puts 'Select a person from the list below by number (not id)'
     people = library.list_people
     puts 'No people found.' if people.empty?
-    people.each_with_index { |person, index|
+    people.each_with_index do |person, index|
       puts "[#{index}] Name: #{person.name}, Age: #{person.age}, Id: #{person.id}"
-    }
+    end
     person_index = gets.chomp.to_i
 
     puts 'Enter date:'

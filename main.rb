@@ -1,5 +1,4 @@
 require './app'
-require './display'
 
 def main
   app = App.new

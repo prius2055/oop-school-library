@@ -35,12 +35,8 @@ class Library
     book = books[book_index]
     return unless person && book
 
-    rental = Rental.new(rental_date, person, book)
+    rental = Rental.new(rental_date, book, person)
     rentals << rental
-    # if person && book
-    #   rental = Rental.new(rental_date, book, person)
-    #   rentals << rental
-    # end
   end
 
   def list_books
