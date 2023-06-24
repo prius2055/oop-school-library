@@ -50,7 +50,8 @@
 - **[A Person class that is a base class to the Teacher and Student classes]**
 - **[A Teacher class that is a subclass of Person]**
 - **[A Student class that is a subclass of Person]**
-- **[A private method in the Person class and public methods in all other classes]**
+- **[A UI that allows users to query the app on a command line]**
+- **[Users can add books, add persons, get book and collect info about books borrowed]**
 
 
 
