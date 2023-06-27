@@ -1,4 +1,7 @@
 require './library'
+# require 'JSON/books.json'
+# require 'JSON/rentals.json'
+# require 'JSON/people.json'
 
 class App
   attr_reader :library
@@ -97,5 +100,12 @@ class App
       puts "Rentals for person with Id #{person_id}"
       puts "Rental date: #{rented.date}, Book: #{rented.book.title} by #{rented.book.author}"
     end
+  end
+
+  def save_data
+    library.save_data('JSON/books.json', library.books)
+    library.save_data('JSON/rentals.json', library.rentals)
+    library.save_data('JSON/people.json', library.people)
+    print 'Data saved'
   end
 end

@@ -1,0 +1,1 @@
+[#<Rental:0x000001f08bf803b8 @date="21/5/2023", @book=#<Book:0x000001f08bf83f90 @title="book2", @author="author2", @rentals=[]>, @person=#<Student:0x000001f08a789ac0 @id=737, @name="person1", @age="21", @parent_permission="no", @rentals=[], @classroom="CLASS 4">>]

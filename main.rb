@@ -32,10 +32,12 @@ def main
     when 7
       puts 'Thank you for using this app. See you around soon!'
       break
+      
     else
       puts 'Invalid choice. Please enter a number from 1 to 7.'
     end
-
+      app.save_data
+      puts 'Data saved'
     puts "\n"
   end
 end

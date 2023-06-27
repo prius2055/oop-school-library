@@ -51,4 +51,17 @@ class Library
     rented = []
     rentals.each { |rental| rented.push(rental) if rental.person.id == person_id }
   end
+  
+
+  def save_data(file, data)
+   File.open(file, 'w') do |file|
+    file.write(data)
+   end
+  end
+
+  def get_data(file)
+    return {} unless File.exist?(file)
+    json_data = File.read(file_path)
+    JSON.parse(json_data)
+  end
 end
